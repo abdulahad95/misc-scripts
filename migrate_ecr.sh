@@ -1,10 +1,10 @@
 #!/bin/bash
-#If running this script on poe-ml account, uncomment the docker image prune line (WARNING: This will delete all unused images on your local, but may be necessary since poeml images are upto 10 GB). Also change TARGET ACCOUNT/PROFILE info.
+#If running this script on account, uncomment the docker image prune line (WARNING: This will delete all unused images on your local, but may be necessary since some images are upto 10 GB). Also change TARGET ACCOUNT/PROFILE info.
 TARGET_ACCOUNT_REGION="us-east-1"
-TARGET_PROFILE="poe_ml"
+TARGET_PROFILE="<profile for dest. account"
 
 DESTINATION_ACCOUNT_REGION="us-east-1"
-DESTINATION_ACCOUNT="570388465206"
+DESTINATION_ACCOUNT="<dest account number>"
 DESTINATION_PROFILE="cpex_poe_dev"
 DESTINATION_ACCOUNT_BASE_PATH="${DESTINATION_ACCOUNT}.dkr.ecr.${DESTINATION_ACCOUNT_REGION}.amazonaws.com"
 
