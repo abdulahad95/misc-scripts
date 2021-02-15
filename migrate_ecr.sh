@@ -1,11 +1,11 @@
 #!/bin/bash
-#If running this script on account, uncomment the docker image prune line (WARNING: This will delete all unused images on your local, but may be necessary since some images are upto 10 GB). Also change TARGET ACCOUNT/PROFILE info.
+#If running this script on an account with large images, uncomment the docker image prune line (WARNING: This will delete all unused images on your local, but may be necessary since some account images can be ~10 GB). Also change TARGET ACCOUNT/PROFILE info.
 TARGET_ACCOUNT_REGION="us-east-1"
-TARGET_PROFILE="<profile for dest. account"
+TARGET_PROFILE="<source account profile>"
 
 DESTINATION_ACCOUNT_REGION="us-east-1"
-DESTINATION_ACCOUNT="<dest account number>"
-DESTINATION_PROFILE="cpex_poe_dev"
+DESTINATION_ACCOUNT="<destination account number>"
+DESTINATION_PROFILE="<destination account profile>"
 DESTINATION_ACCOUNT_BASE_PATH="${DESTINATION_ACCOUNT}.dkr.ecr.${DESTINATION_ACCOUNT_REGION}.amazonaws.com"
 
 REPO_URIS=($(aws ecr describe-repositories --query 'repositories[].repositoryUri' --output text --region $TARGET_ACCOUNT_REGION --profile $TARGET_PROFILE))
