@@ -7,3 +7,6 @@ Take a backup of all your existing EBS volumes and optionally delete pre-existin
 
 ## migrate_ecr.sh:
 When I wrote this script, there was no built-in functionality to migrate ECR repos from one AWS account to another. That seems to have changed... However, this script takes care of migrating all repos from one account to the other, including all the tags in each repo. It ignores unused and unwanted '<untagged>' tags which accumulate after many updates. If the images being migrated are large, remove the 'docker prune' line, but read the comment at the top of the file.
+  
+ ## subreddit.ps1:
+Just a simple script to get used to Powershell syntax. Use this file to retrieve and display, in tabular format, the latest 26 users who posted in a particular Subreddit, and the exact times they did. By default, it searches in "r/powershell". I might add more functionality later to input a user and get all of their top or latest posts
